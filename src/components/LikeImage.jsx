@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
+import SolveByHoc from './SolveByHoc'
 
-export default function LikeImage() {
+function LikeImage({like,handel}) {
 
-  const [likeImageCounter, setLikeImageCounter] = useState(0);
+  /*const [likeImageCounter, setLikeImageCounter] = useState(0);
 
   const handleLikeImageCount = ()=>{
-    setLikeImageCounter(likeImageCounter+1);
-  }
+    setLikeImageCounter(props.like+1);
+  }*/
 
   return (
     <div>
-      <button onClick={handleLikeImageCount}>Like Image {likeImageCounter}</button>
+      <button onClick={handel}>Like Image {like}</button>
     </div>
   )
 }
+
+export default SolveByHoc(LikeImage)

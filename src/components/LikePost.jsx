@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
+import SolveByHoc from './SolveByHoc'
 
-export default function LikePost() {
+function LikePost({like,handel}) {
 
-  const [likePostCounter, setPostCounter] = useState(0);
+  /*const [likePostCounter, setPostCounter] = useState(0);
 
   const handlePostCount = ()=>{
     setPostCounter(likePostCounter+1);
-  }
+  }*/
 
   return (
     <div>
-      <button onClick={handlePostCount}>Like Post {likePostCounter}</button>
+      <button onClick={handel}>Like Post {like}</button>
     </div>
   )
 }
+
+export default SolveByHoc(LikePost)
